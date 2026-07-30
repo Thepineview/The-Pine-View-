@@ -20,20 +20,28 @@
             color: #2d3748;
         }
 
-        /* Top Banner - Signboard Dark Green & Gold Theme */
+        /* Top Banner - Signboard Dark Green & Gold Theme with Trees Art */
         .top-banner {
             background: linear-gradient(135deg, #0f3822 0%, #061c10 100%);
             color: #f4ebd0;
-            padding: 25px 20px;
+            padding: 25px 20px 20px;
             text-align: center;
             border-bottom: 4px solid #c5a059;
             position: relative;
             box-shadow: 0 4px 15px rgba(0,0,0,0.15);
         }
 
+        /* Mountain & Pine Trees SVG Graphic */
+        .pine-trees-art {
+            width: 120px;
+            height: 50px;
+            margin: 0 auto 5px;
+            display: block;
+        }
+
         .banner-logo {
             font-family: 'Cinzel', serif;
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 800;
             letter-spacing: 2px;
             color: #ffffff;
@@ -42,7 +50,7 @@
 
         .banner-sub {
             font-family: 'Cinzel', serif;
-            font-size: 14px;
+            font-size: 13px;
             color: #c5a059;
             letter-spacing: 4px;
             margin-top: 2px;
@@ -50,7 +58,7 @@
         }
 
         .banner-address {
-            font-size: 12px;
+            font-size: 11px;
             color: #e2e8f0;
             margin-top: 8px;
             font-weight: 300;
@@ -266,8 +274,15 @@
 </head>
 <body>
 
-    <!-- Header Banner -->
+    <!-- Header Banner with Pine Trees Art -->
     <div class="top-banner">
+        <!-- SVG Mountain and Pine Trees Art -->
+        <svg class="pine-trees-art" viewBox="0 0 100 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 5L62 25H57L66 35H34L43 25H38L50 5Z" fill="#f4ebd0" opacity="0.9"/>
+            <path d="M30 15L38 30H34L41 37H19L26 30H22L30 15Z" fill="#c5a059" opacity="0.8"/>
+            <path d="M70 15L78 30H74L81 37H59L66 30H62L70 15Z" fill="#c5a059" opacity="0.8"/>
+        </svg>
+
         <div class="banner-logo">THE PINE VIEW</div>
         <div class="banner-sub">HOMESTAY</div>
         <div class="banner-address">📍 Jaripani, Chamba, Tehri Garhwal, Uttarakhand - 249145</div>
@@ -282,7 +297,7 @@
             <!-- Room 1 (₹2,500) -->
             <div class="room-box">
                 <div class="room-header">
-                    <img src="https://i.ibb.co/3s6K21X/room-purple.jpg" alt="Wooden Deluxe Room">
+                    <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80" alt="Wooden Deluxe Room">
                     <div class="room-details">
                         <h3>Wooden Deluxe Room</h3>
                         <div class="room-features">
@@ -305,7 +320,7 @@
             <!-- Room 2 (₹3,000) -->
             <div class="room-box">
                 <div class="room-header">
-                    <img src="https://i.ibb.co/3s6K21X/room-window.jpg" alt="Scenic Mountain View Room">
+                    <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=600&q=80" alt="Scenic Mountain View Room">
                     <div class="room-details">
                         <h3>Scenic Mountain View Room</h3>
                         <div class="room-features">
