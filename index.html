@@ -1,22 +1,26 @@
-
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Pine View - Hotel & Resort</title>
+    <title>The Pine View Homestay</title>
+    <!-- Premium Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', sans-serif;
             scroll-behavior: smooth;
         }
 
         body {
-            background-color: #f8f9fa;
-            color: #333;
+            background-color: #0f172a;
+            color: #f8fafc;
         }
 
         /* Navigation Bar */
@@ -24,92 +28,139 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: #1b4332;
-            padding: 15px 20px;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 18px 25px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             z-index: 1000;
+            border-bottom: 1px solid #334155;
         }
 
         .logo {
-            color: #fff;
-            font-size: 20px;
-            font-weight: bold;
+            color: #38bdf8;
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
         }
 
         .nav-links a {
-            color: #fff;
+            color: #f8fafc;
             text-decoration: none;
-            margin-left: 15px;
+            margin-left: 18px;
             font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s;
         }
 
-        /* Hero Section */
+        .nav-links a:hover {
+            color: #38bdf8;
+        }
+
+        /* Hero Banner */
         .hero {
-            height: 80vh;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80') center/cover;
+            height: 85vh;
+            background: linear-gradient(180deg, rgba(15,23,42,0.4) 0%, rgba(15,23,42,0.95) 100%), 
+                        url('https://i.ibb.co/3s6K21X/building-sunset.jpg') center/cover no-repeat;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            color: white;
             padding: 20px;
             margin-top: 50px;
         }
 
-        .hero h1 { font-size: 36px; margin-bottom: 10px; }
-        .hero p { font-size: 18px; margin-bottom: 20px; }
+        .hero h1 { 
+            font-size: 42px; 
+            font-weight: 700;
+            color: #ffffff; 
+            margin-bottom: 12px; 
+            text-shadow: 0 4px 12px rgba(0,0,0,0.8); 
+            letter-spacing: 1px;
+        }
+
+        .hero p { 
+            font-size: 18px; 
+            font-weight: 300;
+            color: #e2e8f0; 
+            margin-bottom: 30px; 
+            text-shadow: 0 2px 8px rgba(0,0,0,0.8); 
+        }
 
         .btn {
-            background: #25d366;
+            background: #22c55e;
             color: white;
-            padding: 12px 25px;
+            padding: 12px 28px;
             text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 14px;
             display: inline-block;
             margin: 5px;
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.6);
         }
 
         .btn-call {
-            background: #007bff;
+            background: #38bdf8;
+            box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
+        }
+
+        .btn-call:hover {
+            box-shadow: 0 6px 20px rgba(56, 189, 248, 0.6);
         }
 
         /* Sections */
         section { padding: 60px 20px; text-align: center; }
         
         .section-title {
-            font-size: 26px;
-            color: #1b4332;
-            margin-bottom: 20px;
+            font-size: 28px;
+            font-weight: 700;
+            color: #38bdf8;
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
         }
 
-        /* About */
-        .about p { line-height: 1.6; max-width: 800px; margin: 0 auto; color: #555; }
-
-        /* Rooms */
+        /* Room Cards Grid */
         .rooms-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 30px;
             justify-content: center;
-            margin-top: 20px;
+            margin-top: 25px;
         }
 
         .room-card {
-            background: white;
-            border-radius: 10px;
+            background: #1e293b;
+            border-radius: 16px;
             overflow: hidden;
             width: 100%;
-            max-width: 320px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 350px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            border: 1px solid #334155;
+            transition: transform 0.3s;
         }
 
-        .room-card img { width: 100%; height: 200px; object-fit: cover; }
-        .room-info { padding: 15px; }
-        .room-price { color: #1b4332; font-weight: bold; margin: 10px 0; }
+        .room-card:hover { transform: translateY(-6px); }
+
+        .room-card img { 
+            width: 100%; 
+            height: 230px; 
+            object-fit: cover;
+            filter: contrast(105%) brightness(102%);
+        }
+
+        .room-info { padding: 22px; text-align: left; }
+        .room-info h3 { color: #f8fafc; font-size: 20px; font-weight: 600; }
+        .room-info p { color: #94a3b8; font-size: 14px; font-weight: 300; margin: 12px 0; line-height: 1.6; }
+        .room-price { color: #22c55e; font-size: 19px; font-weight: 700; margin: 14px 0; }
 
         /* Amenities */
         .amenities-list {
@@ -117,24 +168,39 @@
             justify-content: center;
             gap: 15px;
             flex-wrap: wrap;
-            margin-top: 20px;
+            margin-top: 25px;
         }
 
         .amenity-item {
-            background: #e8f5e9;
-            padding: 12px 20px;
-            border-radius: 20px;
-            color: #1b4332;
+            background: #1e293b;
+            padding: 12px 24px;
+            border-radius: 30px;
+            color: #38bdf8;
+            font-size: 14px;
             font-weight: 500;
+            border: 1px solid #334155;
+        }
+
+        /* Contact Section */
+        .contact-info {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #cbd5e1;
+        }
+
+        .contact-info a {
+            text-decoration: none;
+            font-weight: 600;
         }
 
         /* Footer */
         footer {
-            background: #1b4332;
-            color: white;
-            padding: 20px;
+            background: #090d16;
+            color: #64748b;
+            padding: 25px;
             text-align: center;
             font-size: 14px;
+            border-top: 1px solid #1e293b;
         }
     </style>
 </head>
@@ -144,51 +210,65 @@
     <nav>
         <div class="logo">The Pine View</div>
         <div class="nav-links">
-            <a href="#about">हमारे बारे में</a>
-            <a href="#rooms">कमरे</a>
-            <a href="#amenities">सुविधाएं</a>
-            <a href="#contact">संपर्क</a>
+            <a href="#about">About</a>
+            <a href="#rooms">Rooms</a>
+            <a href="#amenities">Amenities</a>
+            <a href="#contact">Contact</a>
         </div>
     </nav>
 
-    <!-- Front Banner -->
+    <!-- Main Front Banner -->
     <div class="hero">
-        <h1>Welcome to The Pine View</h1>
-        <p>प्रकृति की गोद में आरामदायक ठहराव</p>
-        <div style="margin-top: 10px;">
-            <a href="https://wa.me/916398842624?text=Hello%20The%20Pine%20View,%20I%20want%20to%20book%20a%20room" class="btn">💬 WhatsApp पर बुक करें</a>
-            <a href="tel:+917900953526" class="btn btn-call">📞 कॉल करें</a>
+        <h1>The Pine View Homestay</h1>
+        <p>A Peaceful Stay Amidst Beautiful Mountain Views</p>
+        <div>
+            <a href="https://wa.me/916398842624?text=Hello%20The%20Pine%20View,%20I%20want%20to%20book%20a%20room" class="btn">💬 WhatsApp Booking</a>
+            <a href="tel:+917900953526" class="btn btn-call">📞 Direct Call</a>
         </div>
     </div>
 
     <!-- About Section -->
-    <section id="about" class="about">
-        <h2 class="section-title">हमारे बारे में</h2>
-        <p>The Pine View में आपका स्वागत है। हम आपको बेहतरीन सुविधाएं, साफ़-सुथरे कमरे और एक यादगार अनुभव प्रदान करते हैं। शांतिपूर्ण माहौल और शानदार नज़ारों का आनंद लेने के लिए आज ही पधारें।</p>
+    <section id="about">
+        <h2 class="section-title">About Us</h2>
+        <p style="max-width: 700px; margin: 0 auto; color: #cbd5e1; line-height: 1.8; font-weight: 300;">
+            Welcome to <strong>The Pine View Homestay</strong>. Located in serene mountain surroundings, we offer cozy rooms with premium wooden interiors, scenic views, clean modern washrooms with geysers, and a peaceful home-like atmosphere for a memorable stay.
+        </p>
     </section>
 
     <!-- Rooms Section -->
     <section id="rooms">
-        <h2 class="section-title">हमारे कमरे</h2>
+        <h2 class="section-title">Rooms & Gallery</h2>
         <div class="rooms-grid">
             
+            <!-- Room 1 -->
             <div class="room-card">
-                <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=500&q=80" alt="Deluxe Room">
+                <img src="https://i.ibb.co/3s6K21X/room-purple.jpg" alt="Wooden Deluxe Room">
                 <div class="room-info">
-                    <h3>Deluxe Room</h3>
-                    <p>AC, Free Wi-Fi, King Bed</p>
-                    <div class="room-price">₹1,999 / रात</div>
-                    <a href="https://wa.me/916398842624?text=I%20want%20to%20book%20Deluxe%20Room" class="btn" style="padding: 8px 15px; font-size: 12px;">बुक करें</a>
+                    <h3>Wooden Deluxe Room</h3>
+                    <p>🪵 Premium Wooden Finish<br>🛏️ Comfortable Double Bed<br>🏔️ Scenic View Window</p>
+                    <div class="room-price">₹2,500 / night</div>
+                    <a href="https://wa.me/916398842624?text=I%20want%20to%20book%20Wooden%20Deluxe%20Room" class="btn" style="padding: 9px 18px; font-size: 13px;">Book via WhatsApp</a>
                 </div>
             </div>
 
+            <!-- Room 2 -->
             <div class="room-card">
-                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=500&q=80" alt="Super Deluxe">
+                <img src="https://i.ibb.co/3s6K21X/room-window.jpg" alt="Scenic Mountain View Room">
                 <div class="room-info">
-                    <h3>Super Deluxe Room</h3>
-                    <p>Mountain View, Balcony, AC</p>
-                    <div class="room-price">₹2,999 / रात</div>
-                    <a href="https://wa.me/916398842624?text=I%20want%20to%20book%20Super%20Deluxe%20Room" class="btn" style="padding: 8px 15px; font-size: 12px;">बुक करें</a>
+                    <h3>Scenic Mountain View Room</h3>
+                    <p>🏔️ Direct Mountain & Valley View<br>☕ Cozy Sitting Area with Table<br>☀️ Sunlit & Ventilated Room</p>
+                    <div class="room-price">₹3,000 / night</div>
+                    <a href="https://wa.me/916398842624?text=I%20want%20to%20book%20Scenic%20Mountain%20View%20Room" class="btn" style="padding: 9px 18px; font-size: 13px;">Book via WhatsApp</a>
+                </div>
+            </div>
+
+            <!-- Bathroom -->
+            <div class="room-card">
+                <img src="https://i.ibb.co/3s6K21X/bathroom-clean.jpg" alt="Clean Washroom">
+                <div class="room-info">
+                    <h3>Clean Modern Washroom</h3>
+                    <p>🚿 24/7 Hot Water (Geyser)<br>🧼 Western Toilet & Clean Tiles<br>💨 Exhaust Ventilation System</p>
+                    <div class="room-price" style="font-size:16px; color:#38bdf8;">Attached Washroom</div>
                 </div>
             </div>
 
@@ -197,30 +277,28 @@
 
     <!-- Amenities Section -->
     <section id="amenities">
-        <h2 class="section-title">सुविधाएं</h2>
+        <h2 class="section-title">Homestay Amenities</h2>
         <div class="amenities-list">
-            <div class="amenity-item">📶 Free High-Speed Wi-Fi</div>
+            <div class="amenity-item">🏔️ Scenic Mountain View</div>
+            <div class="amenity-item">🪵 Premium Wooden Interior</div>
+            <div class="amenity-item">♨️ 24/7 Hot Water (Geyser)</div>
             <div class="amenity-item">🚗 Free Parking</div>
-            <div class="amenity-item">❄️ Fully Air Conditioned</div>
-            <div class="amenity-item">🍽️ Room Service / Food</div>
-            <div class="amenity-item">📹 24/7 CCTV Security</div>
+            <div class="amenity-item">☕ Room Service</div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
-        <h2 class="section-title">संपर्क करें</h2>
-        <p style="margin-bottom: 10px; font-size: 18px;">📞 <strong>कॉल करें:</strong> <a href="tel:+917900953526" style="color:#007bff; text-decoration:none;">7900953526</a></p>
-        <p style="margin-bottom: 20px; font-size: 18px;">💬 <strong>WhatsApp:</strong> <a href="https://wa.me/916398842624" style="color:#25d366; text-decoration:none;">6398842624</a></p>
+        <h2 class="section-title">Contact Us</h2>
+        <p class="contact-info">📞 <strong>Direct Call:</strong> <a href="tel:+917900953526" style="color:#38bdf8;">7900953526</a></p>
+        <p class="contact-info" style="margin-bottom:25px;">💬 <strong>WhatsApp:</strong> <a href="https://wa.me/916398842624" style="color:#22c55e;">6398842624</a></p>
         
-        <div>
-            <a href="https://wa.me/916398842624?text=Hello%20The%20Pine%20View,%20I%20have%20a%20query" class="btn">WhatsApp चैट शुरू करें</a>
-        </div>
+        <a href="https://wa.me/916398842624?text=Hello%20The%20Pine%20View,%20I%20have%20a%20query" class="btn">Chat on WhatsApp</a>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>© 2026 The Pine View. All Rights Reserved.</p>
+        <p>© 2026 The Pine View Homestay. All Rights Reserved.</p>
     </footer>
 
 </body>
