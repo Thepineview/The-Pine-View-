@@ -8,50 +8,55 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         html { scroll-behavior: smooth; }
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
 
     <!-- Header / Navbar -->
-    <header class="sticky top-0 z-50 bg-white shadow-md">
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-md border-b border-emerald-100">
         <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
             
             <!-- Logo Section -->
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-emerald-800 flex items-center justify-center text-white shadow-lg">
-                    <i class="fa-solid fa-tree text-xl"></i>
+                <div class="w-11 h-11 rounded-full bg-emerald-800 flex items-center justify-center text-white shadow-lg border-2 border-emerald-500">
+                    <i class="fa-solid fa-tree text-2xl"></i>
                 </div>
                 <div>
-                    <h1 class="text-xl md:text-2xl font-black text-emerald-900 tracking-wide uppercase leading-tight">THE PINE VIEW</h1>
-                    <p class="text-xs text-emerald-600 font-medium tracking-widest">HOMESTAY • KANATAL</p>
+                    <h1 class="text-xl md:text-2xl font-black text-emerald-950 tracking-wide uppercase leading-none">THE PINE VIEW</h1>
+                    <p class="text-[10px] text-emerald-600 font-extrabold tracking-widest mt-1">HOMESTAY • KANATAL</p>
                 </div>
             </div>
 
-            <nav class="hidden md:flex space-x-6 text-sm font-semibold text-gray-700">
+            <nav class="hidden md:flex space-x-8 text-sm font-bold text-gray-700">
                 <a href="#about" class="hover:text-emerald-600 transition">About</a>
                 <a href="#rooms" class="hover:text-emerald-600 transition">Wooden Rooms</a>
+                <a href="#activities" class="hover:text-emerald-600 transition">Nearby Places</a>
                 <a href="#facilities" class="hover:text-emerald-600 transition">Facilities</a>
-                <a href="#activities" class="hover:text-emerald-600 transition">Activities</a>
                 <a href="#contact" class="hover:text-emerald-600 transition">Contact</a>
             </nav>
 
-            <a href="https://wa.me/916398862624?text=Hi!%20I%20want%20to%20inquire%20about%20booking%20at%20The%20Pine%20View%20Homestay." target="_blank" class="bg-emerald-600 text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-emerald-700 shadow-md transition flex items-center gap-2">
-                <i class="fa-brands fa-whatsapp text-lg"></i> Inquiry / Book
+            <a href="https://wa.me/916398842624?text=Hi!%20I%20want%20to%20inquire%20about%20booking%20at%20The%20Pine%20View%20Homestay." target="_blank" class="bg-emerald-600 text-white px-5 py-2.5 rounded-full text-xs md:text-sm font-bold hover:bg-emerald-700 shadow-md transition flex items-center gap-2 border border-emerald-400">
+                <i class="fa-brands fa-whatsapp text-lg"></i> Book on WhatsApp
             </a>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative bg-cover bg-center h-[75vh] flex items-center justify-center text-white" style="background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80');">
-        <div class="text-center px-4 max-w-3xl">
-            <div class="inline-block bg-emerald-800/80 backdrop-blur-md px-4 py-1.5 rounded-full text-xs md:text-sm font-semibold uppercase tracking-wider mb-4 border border-emerald-400/30">
-                🌲 Welcome To Kanatal 🌲
-            </div>
-            <h2 class="text-4xl md:text-6xl font-extrabold mb-4 shadow-sm">The Pine View Homestay</h2>
-            <p class="text-lg md:text-xl mb-8 font-light text-gray-100">Cozy Handcrafted Wooden Rooms • Breathtaking Mountain & Forest Views</p>
+    <section class="relative hero-bg h-[80vh] flex items-center justify-center text-white px-4">
+        <div class="text-center max-w-4xl">
+            <span class="inline-block bg-emerald-800/90 border border-emerald-400/40 text-emerald-100 text-xs md:text-sm font-semibold px-4 py-1.5 rounded-full mb-4 shadow-lg uppercase tracking-wider">
+                🌲 Escape to Kanatal Hills 🌲
+            </span>
+            <h2 class="text-4xl md:text-7xl font-black mb-4 tracking-tight drop-shadow-md">The Pine View Homestay</h2>
+            <p class="text-lg md:text-2xl font-light mb-8 text-gray-200">Handcrafted Wooden Rooms • Sunset Views • Authentic Himalayan Stay</p>
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="#rooms" class="bg-emerald-600 px-7 py-3 rounded-full font-bold text-white hover:bg-emerald-700 shadow-lg transition">View Rooms & Rates</a>
-                <a href="https://wa.me/916398862624?text=Hi,%20I%20want%20to%20book%20a%20stay" target="_blank" class="bg-white text-emerald-900 px-7 py-3 rounded-full font-bold hover:bg-gray-100 shadow-lg transition flex items-center gap-2">
+                <a href="#rooms" class="bg-emerald-600 text-white font-bold px-8 py-3.5 rounded-full shadow-lg hover:bg-emerald-700 transition">View Rooms & Prices</a>
+                <a href="https://wa.me/916398842624?text=Hi!%20I%20want%20to%20book%20a%20stay" target="_blank" class="bg-white text-emerald-950 font-bold px-8 py-3.5 rounded-full shadow-lg hover:bg-gray-100 transition flex items-center gap-2">
                     <i class="fa-brands fa-whatsapp text-emerald-600 text-xl"></i> Instant Booking
                 </a>
             </div>
@@ -59,92 +64,92 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-16 max-w-7xl mx-auto px-4">
+    <section id="about" class="py-20 max-w-7xl mx-auto px-4">
         <div class="text-center max-w-3xl mx-auto">
-            <h3 class="text-3xl font-extrabold text-gray-900 mb-4">Experience Peaceful Hill Stay</h3>
-            <div class="w-16 h-1 bg-emerald-600 mx-auto mb-6 rounded-full"></div>
+            <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Feel at Home in Nature</h3>
+            <div class="w-20 h-1 bg-emerald-600 mx-auto mb-6 rounded-full"></div>
             <p class="text-gray-600 text-lg leading-relaxed">
-                Located amidst lush green pine forests and peaceful valley surroundings, <strong class="text-emerald-800">The Pine View Homestay</strong> offers warm wooden interiors, modern comforts, and beautiful natural views for a memorable family or couple getaway.
+                Welcome to <strong class="text-emerald-900">The Pine View Homestay</strong>. Surrounded by pine forests and fresh mountain air, our homestay features cozy wooden interiors, peaceful surroundings, delicious home-cooked meals, and breathtaking sunset views.
             </p>
         </div>
     </section>
 
     <!-- Rooms Section -->
-    <section id="rooms" class="py-16 bg-gray-100">
+    <section id="rooms" class="py-20 bg-gray-100">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h3 class="text-3xl font-extrabold text-gray-900 mb-3">Our Wooden Accommodations</h3>
-                <p class="text-gray-600">Select your preferred wooden room type for 2 Guests</p>
-                <div class="w-16 h-1 bg-emerald-600 mx-auto mt-4 rounded-full"></div>
+            <div class="text-center mb-14">
+                <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">Our Wooden Rooms</h3>
+                <p class="text-gray-600 text-lg">Specially designed wooden stays for 2 Guests</p>
+                <div class="w-20 h-1 bg-emerald-600 mx-auto mt-4 rounded-full"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 
                 <!-- Room 1: With Balcony View -->
-                <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 flex flex-col justify-between hover:shadow-2xl transition">
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 flex flex-col justify-between hover:shadow-2xl transition duration-300">
                     <div>
                         <div class="relative">
-                            <img src="1000081669.jpg" alt="Wooden Room with Balcony View" class="w-full h-72 object-cover">
-                            <span class="absolute top-4 right-4 bg-emerald-700 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md">
+                            <img src="1000081669.jpg" alt="Wooden Room with Balcony View" class="w-full h-80 object-cover">
+                            <span class="absolute top-4 right-4 bg-emerald-800 text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg border border-emerald-400">
                                 <i class="fa-solid fa-mountain mr-1"></i> Balcony View
                             </span>
                         </div>
-                        <div class="p-6">
-                            <h4 class="text-2xl font-bold text-gray-900 mb-2">Wooden Room (With Balcony View)</h4>
-                            <div class="flex items-center gap-4 text-sm font-medium text-gray-500 mb-4">
-                                <span><i class="fa-solid fa-users text-emerald-600 mr-1"></i> 2 Guests</span>
-                                <span><i class="fa-solid fa-bed text-emerald-600 mr-1"></i> Double Bed</span>
-                                <span><i class="fa-solid fa-kaaba text-emerald-600 mr-1"></i> Wooden Finish</span>
+                        <div class="p-8">
+                            <h4 class="text-2xl font-extrabold text-gray-900 mb-2">Wooden Room (With Balcony View)</h4>
+                            <div class="flex flex-wrap items-center gap-4 text-xs font-semibold text-gray-500 mb-4">
+                                <span class="bg-emerald-50 text-emerald-800 px-3 py-1 rounded-full"><i class="fa-solid fa-users mr-1"></i> 2 Guests</span>
+                                <span class="bg-emerald-50 text-emerald-800 px-3 py-1 rounded-full"><i class="fa-solid fa-bed mr-1"></i> Double Bed</span>
+                                <span class="bg-emerald-50 text-emerald-800 px-3 py-1 rounded-full"><i class="fa-solid fa-tree mr-1"></i> Forest View</span>
                             </div>
                             <p class="text-gray-600 mb-6 text-sm leading-relaxed">
-                                Premium wooden finish interior room equipped with comfortable double bedding, scenic window lights, and direct access to a gorgeous mountain & forest view balcony.
+                                Beautiful wooden panel interior with a private attached balcony. Wake up to direct valley views, lush pine trees, and fresh mountain breezes.
                             </p>
                             <div class="flex items-baseline justify-between border-t pt-4">
                                 <div>
-                                    <span class="text-3xl font-black text-emerald-800">₹3,000</span>
-                                    <span class="text-sm font-normal text-gray-500"> / night</span>
+                                    <span class="text-4xl font-black text-emerald-900">₹3,000</span>
+                                    <span class="text-sm font-medium text-gray-500"> / night</span>
                                 </div>
-                                <span class="text-xs bg-emerald-50 text-emerald-700 px-2.5 py-1 rounded font-semibold">For 2 Guests</span>
+                                <span class="text-xs bg-emerald-100 text-emerald-900 px-3 py-1 rounded-md font-bold">For 2 Guests</span>
                             </div>
                         </div>
                     </div>
-                    <div class="px-6 pb-6">
-                        <a href="https://wa.me/916398862624?text=Hi!%20I%20want%20to%20book%20the%20Wooden%20Room%20with%20Balcony%20View%20(Rs.%203000%2Fnight%20for%202%20guests)." target="_blank" class="w-full bg-emerald-600 text-white text-center py-3.5 rounded-xl font-bold hover:bg-emerald-700 shadow-md hover:shadow-lg transition flex items-center justify-center gap-2">
+                    <div class="px-8 pb-8">
+                        <a href="https://wa.me/916398842624?text=Hi!%20I%20want%20to%20book%20the%20Wooden%20Room%20with%20Balcony%20View%20(Rs.%203000%2Fnight)." target="_blank" class="w-full bg-emerald-600 text-white text-center py-4 rounded-2xl font-bold hover:bg-emerald-700 shadow-md transition flex items-center justify-center gap-2">
                             <i class="fa-brands fa-whatsapp text-xl"></i> Book This Room on WhatsApp
                         </a>
                     </div>
                 </div>
 
                 <!-- Room 2: Without Balcony View -->
-                <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 flex flex-col justify-between hover:shadow-2xl transition">
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 flex flex-col justify-between hover:shadow-2xl transition duration-300">
                     <div>
                         <div class="relative">
-                            <img src="1000061593.jpg" alt="Standard Wooden Room" class="w-full h-72 object-cover">
-                            <span class="absolute top-4 right-4 bg-gray-700 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md">
-                                <i class="fa-solid fa-door-closed mr-1"></i> Standard Room
+                            <img src="1000061593.jpg" alt="Standard Wooden Room" class="w-full h-80 object-cover">
+                            <span class="absolute top-4 right-4 bg-gray-800 text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg border border-gray-600">
+                                <i class="fa-solid fa-door-closed mr-1"></i> Standard Stay
                             </span>
                         </div>
-                        <div class="p-6">
-                            <h4 class="text-2xl font-bold text-gray-900 mb-2">Standard Wooden Room</h4>
-                            <div class="flex items-center gap-4 text-sm font-medium text-gray-500 mb-4">
-                                <span><i class="fa-solid fa-users text-emerald-600 mr-1"></i> 2 Guests</span>
-                                <span><i class="fa-solid fa-bed text-emerald-600 mr-1"></i> Double Bed</span>
-                                <span><i class="fa-solid fa-tree text-emerald-600 mr-1"></i> Cozy Stay</span>
+                        <div class="p-8">
+                            <h4 class="text-2xl font-extrabold text-gray-900 mb-2">Standard Wooden Room</h4>
+                            <div class="flex flex-wrap items-center gap-4 text-xs font-semibold text-gray-500 mb-4">
+                                <span class="bg-emerald-50 text-emerald-800 px-3 py-1 rounded-full"><i class="fa-solid fa-users mr-1"></i> 2 Guests</span>
+                                <span class="bg-emerald-50 text-emerald-800 px-3 py-1 rounded-full"><i class="fa-solid fa-bed mr-1"></i> Double Bed</span>
+                                <span class="bg-emerald-50 text-emerald-800 px-3 py-1 rounded-full"><i class="fa-solid fa-house mr-1"></i> Cozy Interior</span>
                             </div>
                             <p class="text-gray-600 mb-6 text-sm leading-relaxed">
-                                Full wooden paneled room offering cozy ambience, large window for natural lighting, comfortable bedding, and quiet home-like relaxation without balcony.
+                                Complete handcrafted wooden room offering extra warmth, large window for natural daylight, comfortable double bedding, and quiet privacy.
                             </p>
                             <div class="flex items-baseline justify-between border-t pt-4">
                                 <div>
-                                    <span class="text-3xl font-black text-emerald-800">₹2,500</span>
-                                    <span class="text-sm font-normal text-gray-500"> / night</span>
+                                    <span class="text-4xl font-black text-emerald-900">₹2,500</span>
+                                    <span class="text-sm font-medium text-gray-500"> / night</span>
                                 </div>
-                                <span class="text-xs bg-emerald-50 text-emerald-700 px-2.5 py-1 rounded font-semibold">For 2 Guests</span>
+                                <span class="text-xs bg-emerald-100 text-emerald-900 px-3 py-1 rounded-md font-bold">For 2 Guests</span>
                             </div>
                         </div>
                     </div>
-                    <div class="px-6 pb-6">
-                        <a href="https://wa.me/916398862624?text=Hi!%20I%20want%20to%20book%20the%20Standard%20Wooden%20Room%20(Rs.%202500%2Fnight%20for%202%20guests)." target="_blank" class="w-full bg-emerald-600 text-white text-center py-3.5 rounded-xl font-bold hover:bg-emerald-700 shadow-md hover:shadow-lg transition flex items-center justify-center gap-2">
+                    <div class="px-8 pb-8">
+                        <a href="https://wa.me/916398842624?text=Hi!%20I%20want%20to%20book%20the%20Standard%20Wooden%20Room%20(Rs.%202500%2Fnight)." target="_blank" class="w-full bg-emerald-600 text-white text-center py-4 rounded-2xl font-bold hover:bg-emerald-700 shadow-md transition flex items-center justify-center gap-2">
                             <i class="fa-brands fa-whatsapp text-xl"></i> Book This Room on WhatsApp
                         </a>
                     </div>
@@ -154,85 +159,126 @@
         </div>
     </section>
 
+    <!-- Nearby Attractions Section (WITH PHOTOS) -->
+    <section id="activities" class="py-20 max-w-7xl mx-auto px-4">
+        <div class="text-center mb-14">
+            <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">Nearby Attractions & Activities</h3>
+            <p class="text-gray-600">Explore the best spots around Kanatal during your stay</p>
+            <div class="w-20 h-1 bg-emerald-600 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Surkanda Devi Temple -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=800&q=80" alt="Surkanda Devi Temple" class="w-full h-52 object-cover">
+                <div class="p-6">
+                    <h4 class="text-xl font-extrabold text-gray-900 mb-2">Surkanda Devi Temple</h4>
+                    <p class="text-gray-600 text-sm">Famous Siddha Peeth temple offering 360-degree views of the snow-covered Himalayan peaks.</p>
+                </div>
+            </div>
+
+            <!-- Jungle Trekking & Kaudia Forest -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80" alt="Kaudia Forest Trekking" class="w-full h-52 object-cover">
+                <div class="p-6">
+                    <h4 class="text-xl font-extrabold text-gray-900 mb-2">Kaudia Forest Trekking</h4>
+                    <p class="text-gray-600 text-sm">Enjoy peaceful jungle trails, pine forests, and nature walks right near the homestay.</p>
+                </div>
+            </div>
+
+            <!-- Mountain Sunset & Camping -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Mountain Sunset & Camping" class="w-full h-52 object-cover">
+                <div class="p-6">
+                    <h4 class="text-xl font-extrabold text-gray-900 mb-2">Bonfire & Sunsets</h4>
+                    <p class="text-gray-600 text-sm">Experience golden hour sunsets followed by warm night bonfires under clear starry skies.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
     <!-- Facilities Section -->
-    <section id="facilities" class="py-16 max-w-7xl mx-auto px-4">
-        <h3 class="text-3xl font-extrabold text-center text-gray-900 mb-3">Facilities & Amenities</h3>
-        <div class="w-16 h-1 bg-emerald-600 mx-auto mb-12 rounded-full"></div>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div class="p-6 bg-white border border-gray-100 shadow-md rounded-2xl hover:shadow-lg transition">
-                <i class="fa-solid fa-tree text-4xl text-emerald-600 mb-3"></i>
-                <h5 class="font-bold text-gray-800">100% Wooden Rooms</h5>
-            </div>
-            <div class="p-6 bg-white border border-gray-100 shadow-md rounded-2xl hover:shadow-lg transition">
-                <i class="fa-solid fa-utensils text-4xl text-emerald-600 mb-3"></i>
-                <h5 class="font-bold text-gray-800">Home Cooked Meal</h5>
-            </div>
-            <div class="p-6 bg-white border border-gray-100 shadow-md rounded-2xl hover:shadow-lg transition">
-                <i class="fa-solid fa-fire text-4xl text-emerald-600 mb-3"></i>
-                <h5 class="font-bold text-gray-800">Bonfire Arrangement</h5>
-            </div>
-            <div class="p-6 bg-white border border-gray-100 shadow-md rounded-2xl hover:shadow-lg transition">
-                <i class="fa-solid fa-square-parking text-4xl text-emerald-600 mb-3"></i>
-                <h5 class="font-bold text-gray-800">Free Parking</h5>
-            </div>
-        </div>
-    </section>
-
-    <!-- Nearby Activities Section -->
-    <section id="activities" class="py-16 bg-gray-100">
+    <section id="facilities" class="py-16 bg-emerald-950 text-white">
         <div class="max-w-7xl mx-auto px-4">
-            <h3 class="text-3xl font-extrabold text-center text-gray-900 mb-3">Nearby Attractions</h3>
-            <div class="w-16 h-1 bg-emerald-600 mx-auto mb-12 rounded-full"></div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-100">
-                    <i class="fa-solid fa-person-hiking text-3xl text-emerald-600 mb-3"></i>
-                    <h4 class="text-xl font-bold mb-2">Jungle Trails & Walks</h4>
-                    <p class="text-gray-600 text-sm">Explore serene Kaudia forest trails and mountain nature walks.</p>
+            <h3 class="text-3xl font-extrabold text-center mb-12">Homestay Amenities</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-6 bg-emerald-900/50 rounded-2xl border border-emerald-800">
+                    <i class="fa-solid fa-tree text-4xl text-emerald-400 mb-4"></i>
+                    <h5 class="font-bold">100% Wooden Interiors</h5>
                 </div>
-                <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-100">
-                    <i class="fa-solid fa-mountain text-3xl text-emerald-600 mb-3"></i>
-                    <h4 class="text-xl font-bold mb-2">Surkanda Devi Temple</h4>
-                    <p class="text-gray-600 text-sm">Visit famous spiritual 360-degree Himalayan viewpoint nearby.</p>
+                <div class="p-6 bg-emerald-900/50 rounded-2xl border border-emerald-800">
+                    <i class="fa-solid fa-utensils text-4xl text-emerald-400 mb-4"></i>
+                    <h5 class="font-bold">Home Cooked Food</h5>
                 </div>
-                <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-100">
-                    <i class="fa-solid fa-camera text-3xl text-emerald-600 mb-3"></i>
-                    <h4 class="text-xl font-bold mb-2">Sunset & Stargazing</h4>
-                    <p class="text-gray-600 text-sm">Enjoy golden hour mountain sunsets and clear starry night skies.</p>
+                <div class="p-6 bg-emerald-900/50 rounded-2xl border border-emerald-800">
+                    <i class="fa-solid fa-fire text-4xl text-emerald-400 mb-4"></i>
+                    <h5 class="font-bold">Bonfire Facility</h5>
+                </div>
+                <div class="p-6 bg-emerald-900/50 rounded-2xl border border-emerald-800">
+                    <i class="fa-solid fa-square-parking text-4xl text-emerald-400 mb-4"></i>
+                    <h5 class="font-bold">Free Safe Parking</h5>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 max-w-7xl mx-auto px-4 text-center">
-        <h3 class="text-3xl font-extrabold text-gray-900 mb-3">Inquiry & Location</h3>
-        <p class="text-gray-600 mb-8">Contact us directly to reserve your dates or navigate to our homestay.</p>
-        
-        <div class="flex flex-wrap justify-center items-center gap-6">
-            <a href="tel:7900953526" class="bg-emerald-50 border border-emerald-200 px-6 py-4 rounded-xl hover:bg-emerald-100 transition flex items-center gap-3">
-                <i class="fa-solid fa-phone text-emerald-700 text-xl"></i>
-                <span class="text-gray-800 font-bold">Call: +91 7900953526</span>
-            </a>
-            <a href="https://wa.me/916398842624?text=Hi!%20I%20have%20an%20inquiry%20regarding%20booking." target="_blank" class="bg-emerald-50 border border-emerald-200 px-6 py-4 rounded-xl hover:bg-emerald-100 transition flex items-center gap-3">
-                <i class="fa-brands fa-whatsapp text-emerald-700 text-2xl"></i>
-                <span class="text-gray-800 font-bold">WhatsApp: +91 6398862624</span>
-            </a>
-            <a href="https://maps.google.com/?q=The+Pine+View+Homestay+Kanatal" target="_blank" class="bg-emerald-50 border border-emerald-200 px-6 py-4 rounded-xl hover:bg-emerald-100 transition flex items-center gap-3">
-                <i class="fa-solid fa-location-dot text-emerald-700 text-xl"></i>
-                <span class="text-gray-800 font-bold">Open in Google Maps</span>
-            </a>
+    <!-- Location & Google Maps Section -->
+    <section id="contact" class="py-20 max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">Location & Booking Contact</h3>
+            <p class="text-gray-600">Reach out directly or locate us on Google Maps</p>
+            <div class="w-20 h-1 bg-emerald-600 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            
+            <!-- Contact Details -->
+            <div class="space-y-6">
+                <div class="bg-emerald-50 border border-emerald-200 p-6 rounded-2xl flex items-center gap-5">
+                    <div class="w-14 h-14 bg-emerald-700 text-white rounded-full flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500 font-bold uppercase">Call for Reservation</p>
+                        <a href="tel:7900953526" class="text-2xl font-extrabold text-gray-900 hover:text-emerald-700">+91 7900953526</a>
+                    </div>
+                </div>
+
+                <div class="bg-emerald-50 border border-emerald-200 p-6 rounded-2xl flex items-center gap-5">
+                    <div class="w-14 h-14 bg-emerald-600 text-white rounded-full flex items-center justify-center text-2xl">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500 font-bold uppercase">WhatsApp Inquiry</p>
+                        <a href="https://wa.me/916398842624" target="_blank" class="text-2xl font-extrabold text-gray-900 hover:text-emerald-700">+91 6398842624</a>
+                    </div>
+                </div>
+
+                <a href="https://maps.google.com/?q=Kanatal+Uttarakhand" target="_blank" class="block w-full text-center bg-emerald-900 text-white font-bold py-4 rounded-2xl shadow-lg hover:bg-emerald-800 transition">
+                    <i class="fa-solid fa-location-dot mr-2"></i> Open Location in Google Maps
+                </a>
+            </div>
+
+            <!-- Google Map Embed -->
+            <div class="rounded-3xl overflow-hidden shadow-xl border border-gray-200 h-80">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13770.828551469532!2d78.3308821!3d30.414611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3908d13264c91bf1%3A0x6b1b5e523bf4176!2sKanatal%2C%20Uttarakhand!5e0!3m2!1sen!2sin!4v1700000000000" class="w-full h-full border-0" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8 text-center text-sm border-t border-gray-800">
+    <footer class="bg-gray-950 text-white py-10 text-center text-sm border-t border-gray-800">
         <div class="flex justify-center items-center gap-2 mb-2">
-            <i class="fa-solid fa-tree text-emerald-500"></i>
-            <span class="font-bold text-base tracking-wide">THE PINE VIEW HOMESTAY</span>
+            <i class="fa-solid fa-tree text-emerald-400 text-xl"></i>
+            <span class="font-extrabold text-lg tracking-wider">THE PINE VIEW HOMESTAY</span>
         </div>
-        <p class="text-gray-400">&copy; All rights reserved. Kanatal, Uttarakhand.</p>
+        <p class="text-gray-400">Kanatal, Tehri Garhwal, Uttarakhand</p>
+        <p class="text-gray-600 text-xs mt-4">&copy; All rights reserved.</p>
     </footer>
 
 </body>
-                                </html>
-                                
+                        </html>
+    
