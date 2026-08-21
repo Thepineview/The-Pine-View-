@@ -6,7 +6,7 @@
     <title>The Pine View Homestay - Online Reservation</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <style>
         * {
             margin: 0;
@@ -31,11 +31,10 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.15);
         }
 
-        /* Mountain & Pine Trees Graphic Art */
         .pine-trees-art {
             width: 120px;
             height: 50px;
-            margin: 0 auto 5px;
+            margin: 0 auto 10px;
             display: block;
         }
 
@@ -74,39 +73,35 @@
             gap: 20px;
         }
 
-        /* Left Side: Rooms */
-        .room-list {
+        .rooms-section {
             flex: 2;
-            min-width: 320px;
+            min-width: 300px;
         }
 
+        .sidebar-section {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        /* Room Box Styling */
         .room-box {
             background: #ffffff;
-            border: 1px solid #cbd5e0;
             border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
             margin-bottom: 20px;
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            transition: border-color 0.3s;
-        }
-
-        .room-box:hover {
-            border-color: #0f3822;
+            border: 1px solid #e2e8f0;
         }
 
         .room-header {
-            display: flex;
-            gap: 15px;
-            padding: 15px;
+            position: relative;
         }
 
-        /* Color Graded Image Enhancements */
         .room-header img {
-            width: 150px;
-            height: 115px;
+            width: 100%;
+            height: 220px;
             object-fit: cover;
-            border-radius: 6px;
-            border: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
             filter: contrast(115%) brightness(105%) saturate(120%);
             transition: transform 0.3s, filter 0.3s;
         }
@@ -117,158 +112,55 @@
         }
 
         .room-details {
-            flex: 1;
+            padding: 20px;
         }
 
         .room-details h3 {
-            font-size: 17px;
+            font-family: 'Cinzel', serif;
+            font-size: 1.25rem;
             color: #0f3822;
+            margin-bottom: 8px;
+        }
+
+        .room-price {
             font-weight: 700;
-            font-family: 'Poppins', sans-serif;
+            color: #c5a059;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
         }
 
-        .room-features {
-            font-size: 12px;
-            color: #4a5568;
-            margin-top: 6px;
-            line-height: 1.6;
-        }
-
-        .room-price-tag {
-            text-align: right;
-            min-width: 110px;
-        }
-
-        .room-price-tag span {
-            font-size: 20px;
-            font-weight: 700;
-            color: #1a202c;
-            display: block;
-        }
-
-        .room-price-tag small {
-            font-size: 11px;
-            color: #718096;
-        }
-
-        .room-options {
-            background: #f8fafc;
-            padding: 12px 15px;
-            border-top: 1px solid #edf2f7;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .capacity-badge {
-            font-size: 12px;
-            color: #0f3822;
-            background: #e6f4ea;
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-weight: 600;
-            border: 1px solid #c6edd3;
-        }
-
-        .book-btn {
-            background: #0066ff;
-            color: #ffffff;
+        .btn-book {
+            background-color: #0f3822;
+            color: #f4ebd0;
             border: none;
-            padding: 10px 24px;
-            border-radius: 4px;
+            padding: 10px 20px;
+            border-radius: 5px;
             font-weight: 600;
-            font-size: 12px;
             cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
             transition: background 0.2s;
         }
 
-        .book-btn:hover {
-            background: #004ecc;
+        .btn-book:hover {
+            background-color: #165232;
         }
 
-        /* Right Side: Sidebar Reservation Info */
-        .sidebar {
-            flex: 1;
-            min-width: 280px;
-        }
-
+        /* Sidebar Card */
         .summary-card {
             background: #ffffff;
-            border: 1px solid #cbd5e0;
+            padding: 20px;
             border-radius: 8px;
-            overflow: hidden;
-            position: sticky;
-            top: 20px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
         }
 
         .summary-header {
-            background: #0f3822;
-            color: #c5a059;
-            padding: 12px 15px;
-            font-size: 14px;
-            font-weight: 700;
             font-family: 'Cinzel', serif;
-            letter-spacing: 1px;
-            border-bottom: 2px solid #c5a059;
-        }
-
-        .summary-body {
-            padding: 15px;
-            font-size: 13px;
-        }
-
-        .summary-row {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 12px;
-            color: #4a5568;
-        }
-
-        .summary-total {
-            background: #0f3822;
-            color: #ffffff;
-            padding: 12px 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             font-weight: 700;
-            font-size: 13px;
-        }
-
-        .contact-box {
-            background: #ffffff;
-            border: 1px solid #cbd5e0;
-            border-radius: 8px;
-            padding: 15px;
-            margin-top: 15px;
-            font-size: 12px;
-        }
-
-        .contact-box h4 {
+            font-size: 1.1rem;
             color: #0f3822;
-            margin-bottom: 8px;
-            font-size: 13px;
-        }
-
-        .contact-link {
-            color: #0066ff;
-            text-decoration: none;
-            font-weight: 600;
-            display: block;
-            margin-top: 4px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .container { flex-direction: column; }
-            .room-header { flex-direction: column; }
-            .room-header img { width: 100%; height: 200px; }
-            .room-price-tag { text-align: left; margin-top: 8px; }
-            .room-options { flex-direction: column; gap: 10px; align-items: stretch; }
-            .book-btn { width: 100%; text-align: center; }
+            margin-bottom: 15px;
+            border-bottom: 2px solid #c5a059;
+            padding-bottom: 8px;
         }
     </style>
 </head>
@@ -279,119 +171,58 @@
         <svg class="pine-trees-art" viewBox="0 0 100 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M50 5L62 25H57L66 35H34L43 25H38L50 5Z" fill="#f4ebd0" opacity="0.9"/>
             <path d="M30 15L38 30H34L41 37H19L26 30H22L30 15Z" fill="#c5a059" opacity="0.8"/>
-            <path d="M70 15L78 30H74L81 37H59L66 30H62L70 15Z" fill="#c5a059" opacity="0.8"/>
         </svg>
-
-        <div class="banner-logo">THE PINE VIEW</div>
-        <div class="banner-sub">HOMESTAY</div>
-        <div class="banner-address">📍 Jaripani, Chamba, Tehri Garhwal, Uttarakhand - 249145</div>
+        <div class="banner-logo">THE PINE VIEW HOMESTAY</div>
+        <div class="banner-sub">LUXURY & NATURE</div>
+        <div class="banner-address">Mountain View Road, Peaceful Pines Valley</div>
     </div>
 
-    <!-- Main Content -->
+    <!-- Main Content Container -->
     <div class="container">
         
-        <!-- Room Options (Left) -->
-        <div class="room-list">
+        <!-- Rooms List -->
+        <div class="rooms-section">
             
-            <!-- Room 1 (₹2,500) -->
+            <!-- Room 1 (RIYAN File 1) -->
             <div class="room-box">
                 <div class="room-header">
-                    <img src="https://raw.githubusercontent.com/thepineview/The-Pine-View-/main/1000061593.jpg" alt="Wooden Deluxe Room" onerror="this.src='https://picsum.photos/300/200'">
-                    <div class="room-details">
-                        <h3>Wooden Deluxe Room</h3>
-                        <div class="room-features">
-                            🪵 Premium Wooden Wall Panel Finish<br>
-                            🛏️ King Size Comfortable Bed<br>
-                            🪟 Mountain View Window
-                        </div>
-                    </div>
-                    <div class="room-price-tag">
-                        <span>INR 2,500</span>
-                        <small>Per Night</small>
-                    </div>
+                    <!-- GitHub uploaded image path 1 -->
+                    <img src="./RIYAN_20260516_185650_🌵.jpg" alt="Wooden Deluxe Room" onerror="this.src='https://picsum.photos/600/400'">
                 </div>
-                <div class="room-options">
-                    <span class="capacity-badge">👤 Max 2 Guests</span>
-                    <button class="book-btn" onclick="sendWhatsApp('Wooden Deluxe Room', 2500)">BOOK NOW</button>
+                <div class="room-details">
+                    <h3>Wooden Deluxe Room</h3>
+                    <div class="room-price">₹2,500 / Night</div>
+                    <button class="btn-book">BOOK NOW</button>
                 </div>
             </div>
 
-            <!-- Room 2 (₹3,000) -->
+            <!-- Room 2 (RIYAN File 2) -->
             <div class="room-box">
                 <div class="room-header">
-                    <img src="https://raw.githubusercontent.com/thepineview/The-Pine-View-/main/1000060100.jpg" alt="Scenic Mountain View Room" onerror="this.src='https://picsum.photos/300/201'">
-                    <div class="room-details">
-                        <h3>Scenic Mountain View Room</h3>
-                        <div class="room-features">
-                            🪵 Elegant Wooden Interior & Ceiling<br>
-                            ☕ Cozy Sitting Area with Table<br>
-                            ☀️ Sunlit Room with Valley Window
-                        </div>
-                    </div>
-                    <div class="room-price-tag">
-                        <span>INR 3,000</span>
-                        <small>Per Night</small>
-                    </div>
+                    <!-- GitHub uploaded image path 2 -->
+                    <img src="./RIYAN_20260530_085107_💥.jpg" alt="Scenic Mountain View Room" onerror="this.src='https://picsum.photos/600/401'">
                 </div>
-                <div class="room-options">
-                    <span class="capacity-badge">👤 Max 2 Guests</span>
-                    <button class="book-btn" onclick="sendWhatsApp('Scenic Mountain View Room', 3000)">BOOK NOW</button>
+                <div class="room-details">
+                    <h3>Scenic Mountain View Room</h3>
+                    <div class="room-price">₹3,000 / Night</div>
+                    <button class="btn-book">BOOK NOW</button>
                 </div>
             </div>
 
         </div>
 
-        <!-- Sidebar -->
-        <div class="sidebar">
+        <!-- Reservation Info Sidebar -->
+        <div class="sidebar-section">
             <div class="summary-card">
                 <div class="summary-header">Reservation Summary</div>
-                <div class="summary-body">
-                    <div class="summary-row">
-                        <span>Property:</span>
-                        <strong>The Pine View</strong>
-                    </div>
-                    <div class="summary-row">
-                        <span>Location:</span>
-                        <span>Jaripani, Chamba</span>
-                    </div>
-                    <div class="summary-row">
-                        <span>Hot Water (Geyser):</span>
-                        <span>24/7 Available</span>
-                    </div>
-                    <hr style="border: none; border-top: 1px solid #edf2f7; margin: 10px 0;">
-                    <div class="summary-row" style="color:#0f3822; font-weight:600;">
-                        <span>Direct Booking:</span>
-                        <span>Instant Confirmation</span>
-                    </div>
-                </div>
-                <div class="summary-total">
-                    <span>Lowest Price Guaranteed</span>
-                </div>
-            </div>
-
-            <div class="contact-box">
-                <h4>📞 Direct Contact & Inquiries</h4>
-                <a href="tel:+917900953526" class="contact-link">📞 +91 7900953526</a>
-                <a href="https://wa.me/916398842624" class="contact-link" style="color:#22c55e;">💬 +91 6398842624 (WhatsApp)</a>
-                <span style="display:block; margin-top:8px; color:#718096; font-size:11px;">✉️ thepineview63@gmail.com</span>
+                <p style="font-size: 0.9rem; color: #4a5568; line-height: 1.5;">
+                    Welcome to The Pine View Homestay! Select your check-in dates and room preferences to book your comfortable stay in the lap of nature.
+                </p>
             </div>
         </div>
 
     </div>
 
-    <!-- WhatsApp Redirect Script -->
-    <script>
-        function sendWhatsApp(roomName, price) {
-            var message = `Hello The Pine View Homestay,%0A%0A` +
-                          `I want to book a room:%0A` +
-                          `🏠 *Room:* ${roomName}%0A` +
-                          `👤 *Guests:* Max 2 Guests%0A` +
-                          `💰 *Price:* INR ${price} / night%0A` +
-                          `📍 *Location:* Jaripani, Chamba%0A%0A` +
-                          `Please confirm availability.`;
-
-            window.open(`https://wa.me/916398842624?text=${message}`, '_blank');
-        }
-    </script>
 </body>
-</html>
+    </html>
+    
