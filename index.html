@@ -20,7 +20,7 @@
             color: #2d3748;
         }
 
-        /* Top Banner - Signboard Dark Green & Gold Theme with Trees Art */
+        /* Top Banner */
         .top-banner {
             background: linear-gradient(135deg, #0f3822 0%, #061c10 100%);
             color: #f4ebd0;
@@ -93,22 +93,11 @@
             border: 1px solid #e2e8f0;
         }
 
-        .room-header {
-            position: relative;
-        }
-
         .room-header img {
             width: 100%;
             height: 220px;
             object-fit: cover;
             border-bottom: 1px solid #e2e8f0;
-            filter: contrast(115%) brightness(105%) saturate(120%);
-            transition: transform 0.3s, filter 0.3s;
-        }
-
-        .room-box:hover .room-header img {
-            transform: scale(1.02);
-            filter: contrast(120%) brightness(108%) saturate(125%);
         }
 
         .room-details {
@@ -137,14 +126,8 @@
             border-radius: 5px;
             font-weight: 600;
             cursor: pointer;
-            transition: background 0.2s;
         }
 
-        .btn-book:hover {
-            background-color: #165232;
-        }
-
-        /* Sidebar Card */
         .summary-card {
             background: #ffffff;
             padding: 20px;
@@ -166,7 +149,7 @@
 </head>
 <body>
 
-    <!-- Header Banner with Pine Trees Art -->
+    <!-- Header Banner -->
     <div class="top-banner">
         <svg class="pine-trees-art" viewBox="0 0 100 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M50 5L62 25H57L66 35H34L43 25H38L50 5Z" fill="#f4ebd0" opacity="0.9"/>
@@ -177,17 +160,15 @@
         <div class="banner-address">Mountain View Road, Peaceful Pines Valley</div>
     </div>
 
-    <!-- Main Content Container -->
+    <!-- Main Container -->
     <div class="container">
         
-        <!-- Rooms List -->
         <div class="rooms-section">
             
-            <!-- Room 1 (RIYAN File 1) -->
+            <!-- Room 1 -->
             <div class="room-box">
                 <div class="room-header">
-                    <!-- GitHub uploaded image path 1 -->
-                    <img src="./RIYAN_20260516_185650_🌵.jpg" alt="Wooden Deluxe Room" onerror="this.src='https://picsum.photos/600/400'">
+                    <img src="room1.jpg" alt="Wooden Deluxe Room">
                 </div>
                 <div class="room-details">
                     <h3>Wooden Deluxe Room</h3>
@@ -196,11 +177,10 @@
                 </div>
             </div>
 
-            <!-- Room 2 (RIYAN File 2) -->
+            <!-- Room 2 -->
             <div class="room-box">
                 <div class="room-header">
-                    <!-- GitHub uploaded image path 2 -->
-                    <img src="./RIYAN_20260530_085107_💥.jpg" alt="Scenic Mountain View Room" onerror="this.src='https://picsum.photos/600/401'">
+                    <img src="room2.jpg" alt="Scenic Mountain View Room">
                 </div>
                 <div class="room-details">
                     <h3>Scenic Mountain View Room</h3>
@@ -211,12 +191,12 @@
 
         </div>
 
-        <!-- Reservation Info Sidebar -->
+        <!-- Sidebar -->
         <div class="sidebar-section">
             <div class="summary-card">
                 <div class="summary-header">Reservation Summary</div>
                 <p style="font-size: 0.9rem; color: #4a5568; line-height: 1.5;">
-                    Welcome to The Pine View Homestay! Select your check-in dates and room preferences to book your comfortable stay in the lap of nature.
+                    Welcome to The Pine View Homestay! Select your check-in dates and room preferences to book your stay.
                 </p>
             </div>
         </div>
@@ -225,4 +205,4 @@
 
 </body>
     </html>
-    
+            
